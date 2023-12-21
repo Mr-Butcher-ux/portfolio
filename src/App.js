@@ -10,14 +10,14 @@ import Skills from './components/Skills';
 function App() {
   return (
     <>
-    <Routes>
+    <Router basename={process.env.PUBLIC_URL}>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home/>} />
         <Route path='about' element={<About/>} />
         <Route path='skills' element={<Skills/>} />
         <Route path='contact' element={<Contact/>} />
       </Route>
-    </Routes>
+    </Router>
     </>
     
   );
